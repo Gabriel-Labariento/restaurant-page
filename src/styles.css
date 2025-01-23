@@ -1,0 +1,113 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+  }
+  
+  body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* 5. Improve media defaults */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* 6. Inherit fonts for form controls */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  /* 7. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  /* 8. Improve line wrapping */
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  :root{
+    --smokyBlack: #0D0601;
+    --charcoal: #2D4C61;
+    --ashGray: #BEC9BD;
+    --kobicha: #603C13;
+  }
+
+body {
+    min-height: 100vh;
+    background-color: var(--smokyBlack);
+}
+
+nav {
+    background-color:var(--charcoal);
+    height:fit-content;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+img {
+    height: 500px;
+    width: auto;
+}
+
+button {
+    padding: 10px;
+    outline: none;
+    background-color: var(--charcoal);
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+button:hover{
+    cursor: pointer;
+    border-bottom: 1px solid white;
+}
+
+.main-container {
+    display: grid;
+    grid-template-rows: 40px 1fr;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: 
+    "image title"
+    "image description";
+    row-gap: 20px;
+    height: 100%;
+    padding: 20px;
+    color: var(--ashGray);
+}
+
+.image{
+    grid-area: image;
+}
+
+.name{
+    grid-area: title;
+}
+
+.description{
+    grid-area: description;
+    max-width: 1000px;
+}
