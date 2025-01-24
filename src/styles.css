@@ -56,6 +56,8 @@
 body {
     min-height: 100vh;
     background-color: var(--smokyBlack);
+    display: flex;
+    flex-direction: column;
 }
 
 nav {
@@ -64,6 +66,10 @@ nav {
     display: flex;
     justify-content: space-around;
     padding: 10px;
+}
+
+#content {
+  flex: 1;
 }
 
 img {
@@ -111,3 +117,39 @@ button:hover{
     grid-area: description;
     max-width: 1000px;
 }
+
+.menu-container{
+  width: 100%;
+  min-height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 500px;
+  gap: 10px;
+  padding: 20px;
+}
+
+.appetizer-container, .main-course-container, .desert-container {
+  background-color: var(--ashGray);
+  border-radius: 20px;
+  grid-template-rows: 2fr 1fr 1fr;
+  grid-template-areas: "image" "image" "name" "description";
+  text-align: center;
+  align-content: center;
+}
+
+.appetizer-image, .main-course-image, .desert-image{
+  padding: 20px;
+  height: 300px;
+  grid-area: image;
+  justify-self: center;
+  border-radius: 10px;
+}
+
+.appetizer-title, .main-course-title, .desert-title{
+  grid-area: name;
+}
+
+.appetizer-description, .main-course-description, .desert-description {
+  grid-area: description;
+}
+
