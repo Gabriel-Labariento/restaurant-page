@@ -3,6 +3,7 @@ import foodImage from "./food.jpg";
 const pageLoad = function() {
 
     const content = document.querySelector("#content");
+    content.removeChild(content.firstElementChild);
 
     const container = document.createElement("div");
     container.classList.add("main-container")

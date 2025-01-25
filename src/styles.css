@@ -128,7 +128,7 @@ button:hover{
   padding: 20px;
 }
 
-.appetizer-container, .main-course-container, .desert-container {
+.food-container {
   background-color: var(--ashGray);
   border-radius: 20px;
   grid-template-rows: 2fr 1fr 1fr;
@@ -137,7 +137,7 @@ button:hover{
   align-content: center;
 }
 
-.appetizer-image, .main-course-image, .desert-image{
+.food-image{
   padding: 20px;
   height: 300px;
   grid-area: image;
@@ -145,11 +145,11 @@ button:hover{
   border-radius: 10px;
 }
 
-.appetizer-title, .main-course-title, .desert-title{
+.food-title{
   grid-area: name;
 }
 
-.appetizer-description, .main-course-description, .desert-description {
+.food-description {
   grid-area: description;
 }
 
