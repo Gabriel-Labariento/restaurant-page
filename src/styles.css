@@ -153,3 +153,34 @@ button:hover{
   grid-area: description;
 }
 
+.about-container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 10px;
+  padding: 20px 120px 20px 120px; 
+}
+
+.about-text-container, .about-image-container{
+  height: 600px;
+  display: grid;
+}
+
+.restaurant-image {
+  height: 600px;
+  justify-self: end;
+}
+
+.about-text-container{
+  grid-template-rows: 40px 200px 40px;
+  gap: 30px;
+  padding-top: 100px;
+}
+
+.about-title, .about-description{
+  color: var(--ashGray)
+}
+
+.about-button {
+  width: 250px;
+}
